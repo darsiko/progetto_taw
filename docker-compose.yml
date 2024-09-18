@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    environment:
+      - MONGO_CONNECTION_STRING=mongodb+srv://leonardo:qG1yDDcvoXljPCDy@cluster0.aufwrny.mongodb.net/exam_project_work
+      - SESSION_SECRET=iasgfWIGHFkhvciluwg
+      - PORT=5000
+
+  frontend:
+    build: ./frontend/exam_project_work
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

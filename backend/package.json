@@ -31,6 +31,7 @@
     "envalid": "^8.0.0",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "mongodb": "^6.9.0",
     "mongoose": "^8.5.1",
     "morgan": "^1.10.0"
   }

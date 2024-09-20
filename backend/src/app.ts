@@ -9,19 +9,11 @@ import userRoutes from "./routes/users";
 import bookRoutes from "./routes/books";
 import {requiredAuth} from "./middleware/auth";
 
-const mongoose = require('mongoose');
-
 const app = express();
 
-mongoose.connect('mongodb://mongo:27017/mydatabase', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-    .then(() => console.log('Connected to MongoDB'))
-    .catch((err: any) => console.log('MongoDB connection error:', err));
 app.use(express.json());
 
-app.listen(5001, () => {
+app.listen(5005, () => {
     console.log('Server is running on port 5000');
 });
 

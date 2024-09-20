@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon src/server.ts",
     "lint": "eslint . --ext .ts",
+    "start:dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,7 +20,8 @@
     "@types/morgan": "^1.9.9",
     "eslint": "^9.8.0",
     "globals": "^15.8.0",
-    "nodemon": "^3.1.4",
+    "nodemon": "^3.1.6",
+    "rollup": "^4.22.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.18.0"
